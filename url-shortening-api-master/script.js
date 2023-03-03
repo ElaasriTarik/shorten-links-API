@@ -55,14 +55,36 @@ shortenBtn.addEventListener('click', () => {
 
 
 function copyText(targetLink) {
+  //my code
+
   if (targetLink == undefined) {
      return null;
   }
   console.log('copied');
   // Get the text field
-  
+
    // Copy the text inside the text field
   navigator.clipboard.writeText(linksObj[targetLink].short_link);
   // Alert the copied text
   alert("Copied: " + linksObj[targetLink].short_link);
+
+  //copied code
+
+  if (navigator.userAgent.match('/ipad|ipod|iphone/i')) {
+    // handle iOS devices
+    targetLink.contenteditable = true;
+    targetLink.readonly = false;
+
+    let range = document.createRange();
+    range.selectNodeContents(targetLink);
+
+    let selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    targetLink.setSelectionRange(0, 999999);
+  } else {
+    // other devices are easy
+    navigator.clipboard.writeText(linksObj[targetLink].short_link);
+  }
+  document.execCommand('copy');
 }
