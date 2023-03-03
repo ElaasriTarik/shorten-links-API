@@ -453,4 +453,14 @@ justify-content: space-between;
  .boosterLinks {
    background-image: url('images/bg-boost-desktop.svg');
  }
+ .userSpace {
+    width: 100%;
+   flex-direction: row;
+   justify-content: space-between;
+   gap: 20px;
+   align-items: center;
+ }
+ .inputSpace {
+   min-width: 75%;
+ }
 }
