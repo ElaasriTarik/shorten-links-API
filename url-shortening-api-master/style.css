@@ -330,3 +330,127 @@ justify-content: space-between;
   font-weight: 600;
   border-radius: 500px;
 }
+@media only screen and (min-width: 850px) {
+  .navigation {
+     padding-right: 20px;
+  }
+  .menuItems {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    top: 0;
+    background-color: white;
+    padding-right: 20px;
+  }
+  .mainItems, .signInItems {
+    flex-direction: row;
+    align-items: center;
+
+  }
+  .signInItems > li a {
+    color: hsl(255, 11%, 22%);
+  }
+  .mainItems li a{
+   color: hsl(255, 11%, 22%);
+   padding-right: -20px;
+  }
+  .signINcolor{
+    color: white;
+  }
+  .signInBtn {
+    padding: 5px 20px;
+    color: white;
+  }
+  .menuSpace {
+    display: none;
+  }
+  .headerSection {
+    padding-top: 30px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 70px;
+    overflow: visible;
+  }
+  .bannerSpace {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+  .bannerSpace img {
+    width: 70%;
+  }
+  .mainInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 30px;
+    gap: 0px;
+    max-width: 40%;
+  }
+  .mainInfo h2, .mainInfo p {
+    text-align: left;
+    font-size: 40px;
+  }
+  .mainInfo h2 {
+    font-size: 50px;
+  }
+  .mainInfo p {
+    font-size: 18px;
+  }
+  .getStartedBtn {
+    padding: 10px 20px;
+  }
+  .userInputSpace {
+    width: 80%;
+    margin: 0 auto;
+    left: 10%;
+  }
+  .advancedStatistics {
+    flex-direction: column;
+  }
+  .statistics {
+    flex-direction: row;
+    padding: 10px 30px;
+    height: auto;
+    margin-bottom: 80px;
+    width: 95vw;
+  }
+  .staticSpace {
+    position: relative;
+    height: 70%;
+  }
+  .staticSpace:nth-child(2) {
+    top: 30px;
+  }
+  .staticSpace:nth-child(3) {
+    top: 70px;
+  }
+  .staticImage {
+    left: 10px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .statistics::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height:10px;
+    width: 90%;
+
+    background-color: hsl(180, 66%, 49%);
+  }
+ .staticsIntro {
+   gap: 0px;
+   max-width: 400px;
+ }
+
+ .boosterLinks {
+   background-image: url('images/bg-boost-desktop.svg');
+ }
+}
